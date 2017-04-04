@@ -1,19 +1,14 @@
-module M
-	def report
-		puts "'report' method inside module M"
-	end
+GLOBAL = 'asdf'
+
+puts 'self inside of main'
+puts 
+x = 15
+
+def runner
+	puts GLOBAL
+	puts 'self inside of runner'
+	puts self
 end
 
-class C 
-	include M
-
-	def report
-		puts "'report' method in class C"
-		puts "About to trigger the next higher-up report method..."
-		super 
-		puts "Back from the 'super' call"
-	end
-end
-class D < C
-end
-
+runner
+puts GLOBAL
