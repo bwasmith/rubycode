@@ -1,0 +1,5 @@
+<% if current.user.admin? %>
+	<%= current_user.admin_welcome_message %>
+<% else %>
+	<%= current_user.user_welcome_message %>
+<% end %>
